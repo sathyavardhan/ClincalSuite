@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project name="orian" default="jar">
+
+<target name="info">
+<echo>info block executed  </echo>
+<echo> Apache Ant version is ${ant.version} </echo>
+<echo> Ant files are ${ant.file} </echo>
+<echo> project name is ${ant.project.name}</echo>
+</target>
+
+
+<target name="clean">
+<echo>clean block executed</echo>
+</target>
+
+<target name="compile">
+<echo>compile block executed</echo>
+<javac srcdir="D:/Devops Training/java files" destdir="java files" />
+</target>
+
+<target name="run">
+<echo>run block executed</echo>
+<java classname="Home">
+<classpath path="D:/Devops Training/java files" />
+</java>
+</target>
+
+<target name="jar">
+<mkdir dir="C:/Users/SATHYA VARDHAN/Desktop/build/jar"/>
+
+<jar destfile="build/jar/mine.jar" basedir="D:/Devops Training/java files">
+ 
+</jar>
+</target>
+
+</project>
+
